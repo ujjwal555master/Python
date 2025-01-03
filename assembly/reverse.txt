@@ -1,0 +1,78 @@
+Reverse engineering :-
+	It is the process to reverse the process of creation means if we have a final product like application so,
+	we reverse into the code of application.
+	
+Assembly language is used in reverse engineering.
+assembly language is hardware , os dependent
+
+64 bit system means 8 byte register is used in computer system thier are varity of the x64, x32, x82
+
+Thier are many types of register :-
+	1. rbx, rax, rcx, rdx, rsi, rdi, rbp, rsp, r8, r9, r10, r11, r12 .......
+	
+	Hirarchy of the register to set the arguments
+	RAX		System call 
+	RDI		first argument
+	RSI		second argument
+	RDX
+	RCX
+	R8		and so on....
+	
+System call :- It is used to tell the compiler what to do like open , read , write, close , exit.........
+
+The file store the syscall information --> /usr/include/x86-x64-linux-gnu/asm/unistd_64.h
+
+Open manual page --> man 2 <syscall name>
+
+There are two method is use to write a assembly language code 
+	1. atnt
+	2. intel
+	
+we teach intel assembly language linux x64.
+
+Some important instructions:-
+	MOV
+	ADD
+	SUB
+	CMP
+	TEST
+	JMP
+	JE/JZ
+	JNF/JNZ
+	RET
+	
+--> .asm extension mostly used
+--> nasm is used to convert the asm code into machine level code.
+--> nasm -f elf64 helloworld.asm -o helloworld.o
+--> ld helloworld -o helloworld
+
+--> code of assembly is divided into three parts
+	1. text section --> For code
+	2. data section --> for initialize the value
+	3. bss section --> uninitalize value
+	
+--> Structure
+global _start
+
+section .text
+_start:
+
+section .data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////Rough work
+
